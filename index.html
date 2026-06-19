@@ -1,31 +1,49 @@
-<header>
-    <h1>Purva Rana</h1>
-    <p>Computer Engineering Student</p>
-    <a href="resume/resume.pdf" download>Download Resume</a>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sharma | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a Computer Engineering student passionate about web development and programming.</p>
-</section>
+    <nav>
+        <div class="logo">sharma</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-</section>
+    <section id="hero">
+        <h1>Hi, I'm Sharma</h1>
+        <p>Web Development Intern at Wyntrix Innovation</p>
+        <a href="../assets/resume.pdf" download class="btn">Download Resume</a>
+    </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>Personal Portfolio</h3>
-        <p>A responsive portfolio website with an admin dashboard.</p>
-    </div>
-</section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div id="project-container">
+            <div class="project-card">
+                <h3>Project Title</h3>
+                <p>Project description goes here...</p>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>Email: example@email.com</p>
-</footer>
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
