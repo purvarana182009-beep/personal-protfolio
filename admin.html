@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f2f5; }
+        .form-box { max-width: 500px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: auto; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #2ecc71; color: white; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 4px; cursor: pointer; width: 100%; }
+        button:hover { background: #27ae60; }
+    </style>
+</head>
+<body>
 
+    <div class="form-box">
+        <h2>Admin Dashboard</h2>
+        <p>Add a new project to your portfolio homepage:</p>
+        
+        <form id="projectForm">
+            <label>Project Title</label>
+            <input type="text" id="title" placeholder="e.g., E-commerce Website" required>
+
+            <label>Project Description</label>
+            <textarea id="desc" rows="4" placeholder="Describe what you built..." required></textarea>
+
+            <button type="submit">Publish to Portfolio</button>
+        </form>
+        <br>
+        <a href="index.html">← View Public Portfolio</a>
+    </div>
+
+    <script>
+        document.getElementById('projectForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevents the page from reloading
+
+            // Get values from the inputs
+            const title = document.getElementById('title').value;
+            const desc = document.getElementById('desc').value;
+
+            // Get existing projects from LocalStorage, or start an empty list
+            let projects = JSON.parse(localStorage.getItem('myProjects')) || [];
+
+            // Add the new project to our list
+            projects.push({ title: title, desc: desc });
+
+            // Save the updated list back to LocalStorage
+            localStorage.setItem('myProjects', JSON.stringify(projects));
+
+            alert('Project successfully added!');
+            this.reset(); // Clear the form inputs
+        });
+    </script>
+</body>
+</html>
