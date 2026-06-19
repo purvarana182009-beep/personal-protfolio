@@ -2,48 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sharma | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-
-    <nav>
-        <div class="logo">sharma</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="#">Manage Projects</a></li>
+            <li><a href="#">Update Skills</a></li>
         </ul>
-    </nav>
+    </div>
 
-    <section id="hero">
-        <h1>Hi, I'm Sharma</h1>
-        <p>Web Development Intern at Wyntrix Innovation</p>
-        <a href="../assets/resume.pdf" download class="btn">Download Resume</a>
-    </section>
+    <div class="main-content">
+        <h2>Add New Project</h2>
+        <form id="add-project-form">
+            <label>Project Name:</label>
+            <input type="text" id="proj-title" required>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div id="project-container">
-            <div class="project-card">
-                <h3>Project Title</h3>
-                <p>Project description goes here...</p>
-            </div>
-        </div>
-    </section>
+            <label>Description:</label>
+            <textarea id="proj-desc" required></textarea>
 
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <label>Project Link:</label>
+            <input type="url" id="proj-link">
+
+            <button type="submit">Add to Portfolio</button>
         </form>
-    </section>
+    </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
